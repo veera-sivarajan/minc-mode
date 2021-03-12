@@ -11,7 +11,8 @@
      ;; stuff between double quotes
      ;; ("\"\\.\\*\\?" . font-lock-string-face)
      ;; ; : , ; { } =>  @ $ = are all special elements
-     ( ,(regexp-opt xpy-keywords 'words) . font-lock-builtin-face)
+     ( "\\<\\([0-9]*\\.[0-9]+\\|[0-9]+\\)[df]?\\>" . font-lock-string-face)
+     ( ,(regexp-opt xpy-keywords 'words) . font-lock-keyword-face)
      ("\\<\\([A-Z]*[a-z0-9_]+\\)\\([ \t]*\\)(" . (1. font-lock-function-name-face))
      )))
 
@@ -22,7 +23,7 @@
         (modify-syntax-entry ?\n "> b" synTable)
         synTable)) 
 
-(define-derived-mode xpy-mode prog-mode "xpy"
+(define-derived-mode xpy-mode c-mode "xpy"
   "xpy-mode is a major mode for editing language xpy."
 
   (set-syntax-table xpy-mode-syntax-table) 
