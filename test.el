@@ -20,18 +20,16 @@
         ;; python style comment: “# …”
         (modify-syntax-entry ?\/ ". 12b" synTable)
         (modify-syntax-entry ?\n "> b" synTable)
-        (modify-syntax-entry ?\/ ". 14" synTable)
-        (modify-syntax-entry ?* ". 23" synTable)
-        synTable))
+        synTable)) 
 
 (define-derived-mode xpy-mode prog-mode "xpy"
   "xpy-mode is a major mode for editing language xpy."
 
   ;; (setq font-lock-defaults xpy-font-lock-defaults)
   (set-syntax-table xpy-mode-syntax-table) 
-  (setq-local comment-start "/*")
+  (setq-local comment-start "//")
   (setq-local comment-start-skip "/\\*+[ \t]*")
-  (setq-local comment-end "*/")
+  (setq-local comment-end "")
   (setq-local comment-end-skip "[ \t]*\\*+/")
   ;; actually no need, because our syntax table name is “xpy-mode” + “-syntax-table”, so define-derived-mode will find it and set it
   )
