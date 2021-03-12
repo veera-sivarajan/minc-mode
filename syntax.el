@@ -1,7 +1,6 @@
 (setq mymath-highlights
-      '(("Sin\\|Cos\\|Sum" . font-lock-function-name-face)
-        ("Pi\\|Infinity" . font-lock-constant-face)))
+      '(("\\<\\([A-Z]*[a-z0-9_]+\\)\\([ \t]*\\)(" . (1 font-lock-function-name-face)) t))
 
-(define-derived-mode mymath-mode fundamental-mode "mymath"
+(define-derived-mode mymath-mode text-mode "mymath"
   "major mode for editing mymath language code."
   (setq font-lock-defaults '(mymath-highlights)))
