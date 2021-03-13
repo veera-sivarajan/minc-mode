@@ -6,14 +6,32 @@
     "return" "short" "signed" "sizeof" "static" "struct" "switch" "typedef"
     "union" "unsigned" "void" "volatile" "while")) 
 
+(defface xpy-keywords
+  '((t :foreground "red"
+       ))
+  "Face"
+  :group 'xpy-mode)  
+
+(defface xpy-function
+  '((t :foreground "white"
+       :weight ultra-bold
+       :width extra-expanded
+       ))
+  "Face"
+  :group 'xpy-mode)  
+
+
+(defvar xpy-keywords 'xpy-keywords)
+(defvar xpy-function 'xpy-function) 
+
 (defvar xpy-font-lock-defaults
   `((
      ;; stuff between double quotes
      ;; ("\"\\.\\*\\?" . font-lock-string-face)
      ;; ; : , ; { } =>  @ $ = are all special elements
-     ( "\\<\\([0-9]*\\.[0-9]+\\|[0-9]+\\)[df]?\\>" . font-lock-string-face)
-     ( ,(regexp-opt xpy-keywords 'words) . font-lock-keyword-face)
-     ("\\<\\([A-Z]*[a-z0-9_]+\\)\\([ \t]*\\)(" . (1. font-lock-function-name-face))
+     ( "\\<\\([0-9]*\\.[0-9]+\\|[0-9]+\\)[df]?\\>" . font-lock-string-face) 
+     ( ,(regexp-opt xpy-keywords 'words) . xpy-keywords) 
+     ("\\<\\([A-Z]*[a-z0-9_]+\\)\\([ \t]*\\)(" . (1. xpy-function))
      )))
 
 (setq xpy-mode-syntax-table
