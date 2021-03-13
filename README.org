@@ -1,0 +1,4 @@
+* Minimal Syntax Highlighting for C 
+1. Keywords - gray
+2. Function names - ultra-bold and white 
+3. String literals and constants - same color as =font-lock-string-face= 
