@@ -1,4 +1,13 @@
 * Minimal Syntax Highlighting for C 
+This package provides a modest and plain sytnax highlighting for C source code. 
+** Color Scheme
 1. Keywords - gray
 2. Function names - ultra-bold and white 
-3. String literals and constants - same color as =font-lock-string-face= 
+3. String literals and constants - same as =font-lock-string-face= 
+** Installation
+Clone this repo and add the following lines in your config file.
+#+begin_src elisp 
+(load "<path_to_highlight.el>") 
+(add-to-list 'auto-mode-alist '("\\.c\\'" . minc-mode))
+(add-to-list 'auto-mode-alist '("\\.h\\'" . minc-mode))
+#+end_src 
