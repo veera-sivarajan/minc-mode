@@ -63,3 +63,6 @@
   (setq-local comment-end "")
   (setq-local comment-end-skip "[ \t]*\\*+/")
   )
+
+;; add symbol name to features list
+(provide 'minc-mode) 
