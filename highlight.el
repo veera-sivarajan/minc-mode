@@ -23,17 +23,8 @@
   "Function Face"
   :group 'minc-mode)  
 
-;; (defface minc-comment-face
-;;   '((t :foreground "#7a7272"
-;;        :slat italic
-;;        ))
-;;   "Comment Face"
-;;   :group 'minc-mode)
-
-
 (defvar minc-keywords-face 'minc-keywords-face)
 (defvar minc-function-face 'minc-function-face) 
-;; (defvar minc-comment-face 'minc-comment-face) 
 
 ;; match font faces with regex
 (defvar minc-font-lock-defaults
@@ -48,9 +39,7 @@
 
 (setq minc-mode-syntax-table
       (let ( (synTable (make-syntax-table)))
-        ;; Add Cpp style comments "//" to syntax table
-        (modify-syntax-entry ?\/ ". 12b" synTable)
-        (modify-syntax-entry ?\n "> b" synTable)
+        (c-populate-syntax-table synTable)
         synTable)) 
 
 (define-derived-mode minc-mode c-mode "C"
@@ -59,10 +48,8 @@
   (set-syntax-table minc-mode-syntax-table) 
   (setq font-lock-defaults minc-font-lock-defaults)
   (setq-local comment-start "//")
-  (setq-local comment-start-skip "/\\*+[ \t]*")
   (setq-local comment-end "")
-  (setq-local comment-end-skip "[ \t]*\\*+/")
   )
 
-;; add symbol name to features list
+; add symbol name to features list
 (provide 'minc-mode) 
