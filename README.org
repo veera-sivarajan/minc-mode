@@ -1,7 +1,7 @@
 * minc: Minimal Syntax Highlighting for C
 This package provides a modest and easy on the eyes highlighting for C source code. 
 #+ATTR_HTML: :style margin-left: auto; margin-right: auto;
-[[https://i.ibb.co/XZj4Th3/Screenshot-20210407-234631.png]]
+[[https://i.ibb.co/P66TkBk/Screenshot-20210408-100438.png]]
 ** Color Scheme
 1. Keywords - gray
 2. Function names - ultra-bold and white 
@@ -15,5 +15,4 @@ Clone this repo and add the following lines in your config file.
 #+end_src 
 ** Acknowledgement
 [[http://ergoemacs.org/emacs/elisp_syntax_coloring.html][Xah Emacs]]
-
 [[https://peppe.rs/posts/color_conundrum/][NerdyPepper]]
