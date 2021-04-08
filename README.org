@@ -15,4 +15,5 @@ Clone this repo and add the following lines in your config file.
 #+end_src 
 ** Acknowledgement
 [[http://ergoemacs.org/emacs/elisp_syntax_coloring.html][Xah Emacs]]
+
 [[https://peppe.rs/posts/color_conundrum/][NerdyPepper]]
