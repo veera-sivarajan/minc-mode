@@ -1,5 +1,5 @@
-* minc: Minimal Syntax Highlighting for C
-This package provides a modest and easy on the eyes highlighting for C source code. 
+** About
+This package provides a modest and easy on the eyes syntax highlighting for C source code. 
 #+ATTR_HTML: :style margin-left: auto; margin-right: auto;
 [[https://i.ibb.co/P66TkBk/Screenshot-20210408-100438.png]]
 ** Color Scheme
@@ -14,5 +14,5 @@ Clone this repo and add the following lines in your config file.
 (add-to-list 'auto-mode-alist '("\\.h\\'" . minc-mode))
 #+end_src 
 ** Acknowledgement
-[[http://ergoemacs.org/emacs/elisp_syntax_coloring.html][Xah Emacs]]
-[[https://peppe.rs/posts/color_conundrum/][NerdyPepper]]
+1. [[https://peppe.rs/posts/color_conundrum/][NerdyPepper]]
+2. [[http://ergoemacs.org/emacs/elisp_syntax_coloring.html][Xah Emacs]]
